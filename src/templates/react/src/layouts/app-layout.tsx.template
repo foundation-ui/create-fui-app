@@ -1,0 +1,34 @@
+"use client";
+
+import styled from "styled-components";
+
+import { Outlet } from "react-router";
+
+import { Page, ScrollArea } from "@foundation-ui/components";
+import { Navigation } from "../components";
+
+const AppBox = styled.div`
+  margin: 0 auto;
+  max-width: var(--breakpoint-desktop-small);
+  min-width: var(--breakpoint-mobile-small);
+`;
+
+function AppLayout() {
+  return (
+    <Page>
+      <Page.Content className="w-100 h-100">
+        <Navigation />
+
+        <Page.Wrapper $menus={1.1}>
+          <ScrollArea className="w-100 h-100" scrollbar>
+            <AppBox className="p-medium-60 w-100 h-100">
+              <Outlet />
+            </AppBox>
+          </ScrollArea>
+        </Page.Wrapper>
+      </Page.Content>
+    </Page>
+  );
+}
+
+export default AppLayout;

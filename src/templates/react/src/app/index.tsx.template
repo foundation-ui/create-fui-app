@@ -1,0 +1,30 @@
+"use client";
+
+import { BrowserRouter } from "react-router";
+import { Toaster } from "sonner";
+import { ClientProvider } from "../providers";
+
+import { AppRoutes } from "../routes";
+
+function App() {
+  return (
+    <ClientProvider>
+      <Toaster
+        toastOptions={{
+          style: {
+            borderRadius: "var(--measurement-medium-30)",
+            borderColor: "var(--font-color-alpha-10)",
+            background: "var(--body-color)",
+            color: "var(--font-color)",
+            fontSize: "var(--fontsize-medium-10)",
+          },
+        }}
+      />
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+    </ClientProvider>
+  );
+}
+
+export default App;

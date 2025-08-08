@@ -1,0 +1,24 @@
+import React from "react";
+
+import { Icon, PixelIcon } from "@foundation-ui/icons";
+import HomePage from "../app/home";
+
+export type RouteItem = {
+  href: string;
+  label: string;
+  icon: React.ReactNode;
+  page: React.ReactNode;
+};
+
+export const PublicRoutes: RouteItem[] = [
+  {
+    href: "",
+    label: "Home",
+    icon: (
+      <Icon>
+        <PixelIcon.Dashbaord />
+      </Icon>
+    ),
+    page: <HomePage />,
+  },
+] as RouteItem[];

@@ -1,16 +1,20 @@
-import React from "react";
+"use client";
+
 import { Route, Routes } from "react-router";
+import { PublicRoutes } from "./public.routes";
 
+import { AppLayout } from "../layouts";
 
-function AppRouter() {
-    return (
-        <ThemeProvider>
-            <Routes>
-                <Route path={"/"} element={<div />}>
-                   
-            </Routes>
-        </ThemeProvider>
-    );
+function AppRoutes() {
+  return (
+    <Routes>
+      <Route path={"/"} element={<AppLayout />}>
+        {PublicRoutes.map((route, key) => (
+          <Route key={`route_${key}`} path={route.href} element={route.page} />
+        ))}
+      </Route>
+    </Routes>
+  );
 }
 
-export default AppRouter;
+export default AppRoutes;

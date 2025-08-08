@@ -137,7 +137,6 @@ web_modules/
 # build / generate output
 build
 dist
-lib
 
 ### react ###
 .DS_*

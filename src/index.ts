@@ -14,16 +14,35 @@ program
   )
   .version("1.0.0")
   .argument("[project-name]", "name of the project")
-  .action(async (projectName, _options) => {
-    await createProject(projectName);
+  .option("-t, --template <template>", "template to use")
+  .action(async (projectName, options) => {
+    await createProject(projectName, options);
   });
 
-async function createProject(projectName: string) {
-  const name = await getProjectName();
-  if (!projectName) projectName = name;
+async function createProject(projectName: string, options: any) {
+  // Get project name - only prompt if not provided
+  if (!projectName) projectName = await getProjectName();
 
-  const config = await getProjectConfig();
-  await generateProject(projectName, config.template, config);
+  // Get config - only prompt if template not provided via options
+  let config: any = {};
+
+  // No template provided, use interactive mode
+  if (!options.template) {
+    config = await getProjectConfig();
+  } else {
+    config = {
+      template: options.template,
+    };
+  }
+
+  await generateProject({
+    projectName,
+    template: options.template ?? config.template,
+    config: {
+      ...config,
+      projectName,
+    },
+  });
 }
 
 program.parse();

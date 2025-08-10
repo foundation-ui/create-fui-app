@@ -3,9 +3,11 @@ import path from "path";
 import chalk from "chalk";
 import ora from "ora";
 
-function processTemplate(content: string): string {
-  // Replace template variables
-  return content.replace(/{{PROJECT_NAME}}/g, "my-app");
+function processTemplate(content: string, config: any): string {
+  // Replace template variables with actual values
+  return content
+    .replace(/\{\{PROJECT_NAME\}\}/g, config.projectName || "my-app")
+    .replace(/\{\{TEMPLATE\}\}/g, config.template || "react");
 }
 
 async function copyTemplateFiles(
@@ -26,7 +28,7 @@ async function copyTemplateFiles(
       if (file.name.endsWith(".template")) {
         // Process template file
         let content = await fs.readFile(srcPath, "utf-8");
-        content = processTemplate(content);
+        content = processTemplate(content, config); // Pass config to processTemplate
         await fs.writeFile(destPath, content);
       } else {
         // Copy file as-is
@@ -36,16 +38,29 @@ async function copyTemplateFiles(
   }
 }
 
-export async function generateProject(
-  projectName: string,
-  template: string,
-  config: any
-) {
+export async function generateProject({
+  projectName,
+  template,
+  config,
+}: {
+  projectName: string;
+  template: string;
+  config: any;
+}) {
   const spinner = ora("🔧 Creating project...").start();
 
   try {
     const targetDir = path.join(process.cwd(), projectName);
     const templateDir = path.join(__dirname, "../templates", template);
+
+    // Check if template directory exists
+    if (!(await fs.pathExists(templateDir))) {
+      spinner.fail(chalk.red(`⚠️  Template "${template}" not found`));
+      console.log(
+        chalk.gray("Available templates might include: nextjs, react, express")
+      );
+      return;
+    }
 
     // Check if directory exists
     if (await fs.pathExists(targetDir)) {

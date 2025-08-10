@@ -1,14 +1,14 @@
 {
   "name": "@usefui/create-fui-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Open Source Command Line Interfaces to start app using foundation-ui technologies",
   "main": "dist/index.js",
   "bin": {
     "create-fui-app": "dist/index.js"
   },
   "scripts": {
-    "build": "tsc",
-    "build:clean": "rm -rf dist",
+    "build": "tsc && pnpm build:templates",
+    "build:templates": "node scripts/copy-templates.js",
     "cli:run": "ts-node src/index.ts",
     "cli:watch": "nodemon --exec ts-node src/index.ts"
   },
@@ -30,10 +30,6 @@
   },
   "homepage": "https://github.com/foundation-ui/create-fui-app#readme",
   "license": "MIT",
-  "files": [
-    "dist",
-    "templates"
-  ],
   "dependencies": {
     "chalk": "^4.1.2",
     "commander": "^11.1.0",

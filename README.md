@@ -6,16 +6,16 @@ Open Source Command Line Interface to bootstrap Foundation UI applications with 
 
 ```bash
 # Create a new React app
-pnpx create-fui-app my-app --template react
+pnpx @usefui/create-fui-app my-app --template react
 
 # Create a new Next.js app
-pnpx create-fui-app my-app --template nextjs
+pnpx @usefui/create-fui-app my-app --template nextjs
 
 # Create a new Next.js docs site
-pnpx create-fui-app my-app --template nextjs-docs
+pnpx @usefui/create-fui-app my-app --template nextjs-docs
 
 # Interactive mode (choose template)
-pnpx create-fui-app my-app
+pnpx @usefui/create-fui-app my-app
 ```
 
 ## Examples
@@ -32,17 +32,17 @@ This example shows basic usage of the create-fui-app CLI.
 
 ```bash
 # Create and start a React app
-pnpx create-fui-app my-react-app --template react
+pnpx @usefui/create-fui-app my-react-app --template react
 cd my-react-app
 pnpm install && pnpm dev
 
 # Create and start a Next.js app
-pnpx create-fui-app my-nextjs-app --template nextjs
+pnpx @usefui/create-fui-app my-nextjs-app --template nextjs
 cd my-nextjs-app
 pnpm install && pnpm dev
 
 # Create and start a Next.js docs site
-pnpx create-fui-app my-docs --template nextjs-docs
+pnpx @usefui/create-fui-app my-docs --template nextjs-docs
 cd my-docs
 pnpm install && pnpm dev
 ```

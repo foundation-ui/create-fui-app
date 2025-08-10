@@ -78,7 +78,7 @@ export async function generateProject({
 
     console.log(chalk.blue("\n💡 Next steps:"));
     console.log(chalk.gray(`  cd ${projectName}`));
-    console.log(chalk.gray("  pnpm run dev"));
+    console.log(chalk.gray("  pnpm instll && pnpm dev"));
   } catch (error) {
     spinner.fail(chalk.red("⚠️ Failed to create project"));
     console.error(error);

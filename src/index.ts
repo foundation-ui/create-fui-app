@@ -8,7 +8,7 @@ import { getProjectName, getProjectConfig } from "./commands/prompts";
 const program = new Command();
 
 program
-  .name("@usefui/bootstrap")
+  .name("@usefui/create-fui-app")
   .description(
     "Open Source Command Line Interfaces to start app using foundation-ui technologies"
   )

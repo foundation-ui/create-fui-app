@@ -1,17 +1,16 @@
 {
-  "name": "@usefui/bootstrap",
+  "name": "@usefui/create-fui-app",
   "version": "1.0.4",
   "description": "Open Source Command Line Interfaces to start app using foundation-ui technologies",
   "main": "dist/index.js",
   "bin": {
-    "bootstrap": "dist/index.js"
+    "create-fui-app": "dist/index.js"
   },
   "scripts": {
     "build": "tsc",
     "build:clean": "rm -rf dist",
     "cli:run": "ts-node src/index.ts",
-    "cli:watch": "nodemon --exec ts-node src/index.ts",
-    "cli:link": "pnpm --global unlink @usefui/bootstrap && pnpm --global link"
+    "cli:watch": "nodemon --exec ts-node src/index.ts"
   },
   "keywords": [
     "cli",
@@ -27,9 +26,9 @@
   ],
   "author": "Nicolas Nunes",
   "bugs": {
-    "url": "https://github.com/foundation-ui/bootstrap/issues"
+    "url": "https://github.com/foundation-ui/create-fui-app/issues"
   },
-  "homepage": "https://github.com/foundation-ui/bootstrap#readme",
+  "homepage": "https://github.com/foundation-ui/create-fui-app#readme",
   "license": "MIT",
   "files": [
     "dist",

@@ -1,6 +1,6 @@
 {
   "name": "@usefui/create-fui-app",
-  "version": "1.0.4",
+  "version": "1.0.1",
   "description": "Open Source Command Line Interfaces to start app using foundation-ui technologies",
   "main": "dist/index.js",
   "bin": {

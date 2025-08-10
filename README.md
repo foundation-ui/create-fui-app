@@ -81,4 +81,4 @@ pnpm install && pnpm dev
 
 ## License
 
-MIT © Foundation UI
+MIT © [Nicolas Nunes](https://github.com/foundation-ui/svgjsx)

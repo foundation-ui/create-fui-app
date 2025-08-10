@@ -1,0 +1,20 @@
+"use client";
+
+import React from "react";
+
+function DocsHeading({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
+  return (
+    <hgroup>
+      <h1 className="fs-large-30 m-b-medium-30">{title}</h1>
+      <p className="fs-medium-20 opacity-default-60">{description}</p>
+    </hgroup>
+  );
+}
+
+export default DocsHeading;

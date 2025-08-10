@@ -1,0 +1,31 @@
+---
+title: Introduction
+description:
+---
+
+<DocsTextBlock className="m-b-medium-60">
+  Try out the different templates that `@usefui/create-fui-app` offers.
+</DocsTextBlock>
+
+<DocsCodePreview language="shell" code={`pnpx create fui-app`} />
+
+    <DocsPropsTable
+    extended
+    hideTypes
+    properties={[
+        {
+        name: "react-app",
+        description: "Create a ready-to-use React app structure.",
+        },
+        {
+        name: "nextjs-app",
+        description: "Create a ready-to-use NextJS app structure.",
+        },
+        {
+        name: "nextjs-docs",
+        description: "Create a NextJS app structure with a MDX pages engine.",
+        },
+    ]}
+    />
+
+<DocsFooter prev="/" next="" />

@@ -1,0 +1,6 @@
+export const COMMON_LINKS = [
+  {
+    link: "/docs/introduction",
+    label: "Introduction",
+  },
+];

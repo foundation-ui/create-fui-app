@@ -81,4 +81,4 @@ pnpm install && pnpm dev
 
 ## License
 
-MIT © [Nicolas Nunes](https://github.com/foundation-ui/svgjsx)
+MIT © [Nicolas Nunes](https://github.com/foundation-ui/create-fui-app)

@@ -3,8 +3,8 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 
-import { Button } from "@foundation-ui/components";
-import { Icon, PixelIcon } from "@foundation-ui/icons";
+import { Button } from "@usefui/components";
+import { Icon, PixelIcon } from "@usefui/icons";
 
 function DocsFooter({
   prev,

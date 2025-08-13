@@ -2,8 +2,8 @@
 
 import styled from "styled-components";
 
-import { Avatar, Button } from "@foundation-ui/components";
-import { Icon, SocialIcon } from "@foundation-ui/icons";
+import { Avatar, Button } from "@usefui/components";
+import { Icon, SocialIcon } from "@usefui/icons";
 import { useRouter } from "next/navigation";
 
 const FUIAvatar = styled(Avatar)`

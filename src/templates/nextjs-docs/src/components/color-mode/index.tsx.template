@@ -1,9 +1,9 @@
 "use client";
 
-import { useColorMode } from "@foundation-ui/tokens";
+import { useColorMode } from "@usefui/tokens";
 
-import { Badge, Button, Tooltip } from "@foundation-ui/components";
-import { Icon, PixelIcon } from "@foundation-ui/icons";
+import { Badge, Button, Tooltip } from "@usefui/components";
+import { Icon, PixelIcon } from "@usefui/icons";
 
 function ColorModes() {
   const { setColorMode } = useColorMode();

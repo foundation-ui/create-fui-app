@@ -3,7 +3,7 @@
 import React from "react";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ColorModeProvider, js_design_tokens } from "@foundation-ui/tokens";
+import { ColorModeProvider, js_design_tokens } from "@usefui/tokens";
 
 import {
   generateAlpha,
@@ -13,10 +13,10 @@ import {
   generateLayoutClasses,
   generateOpacityClasses,
   generateSizeClasses,
-} from "@foundation-ui/core";
+} from "@usefui/core";
 
 import { createGlobalStyle } from "styled-components";
-import { ResetStyles, TypographyRoot } from "@foundation-ui/styles";
+import { ResetStyles, TypographyRoot } from "@usefui/styles";
 
 const { design_tokens } = js_design_tokens;
 

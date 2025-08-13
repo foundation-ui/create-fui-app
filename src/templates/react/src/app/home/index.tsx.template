@@ -2,8 +2,8 @@
 
 import styled from "styled-components";
 
-import { Avatar } from "@foundation-ui/components";
-import { Icon, SocialIcon } from "@foundation-ui/icons";
+import { Avatar } from "@usefui/components";
+import { Icon, SocialIcon } from "@usefui/icons";
 
 const FUIAvatar = styled(Avatar)`
   background: var(--font-color) !important;

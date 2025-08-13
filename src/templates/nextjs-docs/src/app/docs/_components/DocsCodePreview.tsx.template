@@ -3,8 +3,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Button, ScrollArea } from "@foundation-ui/components";
-import { Icon, PixelIcon } from "@foundation-ui/icons";
+import { Button, ScrollArea } from "@usefui/components";
+import { Icon, PixelIcon } from "@usefui/icons";
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";

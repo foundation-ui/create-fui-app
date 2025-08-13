@@ -1,7 +1,7 @@
 "use client";
 
-import { Page, Button, Tooltip } from "@foundation-ui/components";
-import { Icon, PixelIcon, SocialIcon } from "@foundation-ui/icons";
+import { Page, Button, Tooltip } from "@usefui/components";
+import { Icon, PixelIcon, SocialIcon } from "@usefui/icons";
 
 import { ColorModes } from "../";
 

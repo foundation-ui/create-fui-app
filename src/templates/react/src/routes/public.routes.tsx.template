@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Icon, PixelIcon } from "@foundation-ui/icons";
+import { Icon, PixelIcon } from "@usefui/icons";
 import HomePage from "../app/home";
 
 export type RouteItem = {

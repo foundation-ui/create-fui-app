@@ -3,7 +3,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Badge } from "@foundation-ui/components";
+import { Badge } from "@usefui/components";
 
 const Banner = styled(Badge)`
   justify-content: flex-start !important;
